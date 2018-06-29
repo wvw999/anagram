@@ -1,6 +1,6 @@
 class Ragaman
 
-  def initialize(source,candidate)
+  def initialize(source, candidate)
     @original_input_pre_formatting = source.to_s.downcase
     if @original_input_pre_formatting.match(" ")
       @original_input = @original_input_pre_formatting.clone.gsub(/ /, '')
@@ -11,7 +11,7 @@ class Ragaman
     @result_message = ""
     if @original_input.match?(/[aeiouy]/)
     else
-      @result_message += "Your original word input was not a word"
+      @result_message += "Your original word, input was not a word"
     end
   end
   # anagrammer

@@ -20,6 +20,7 @@ until play == "n"
     print input_two
     session = Ragaman.new(input_one, input_two)
     program_output = session.ragamanner()
+    print program_output
   elsif play == "n"
     exit
   else
