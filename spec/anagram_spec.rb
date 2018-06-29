@@ -30,12 +30,8 @@ describe('#anagram') do
     is_anagram = Ragaman.new("piesieat", "Tea sip ie")
     expect(is_anagram.ragamanner()).to(include("tea sip ie is an anagram of piesieat"))
   end
-  # it('when phrases and original word do not match, check each word in phrase against original input') do
-  #   is_anagram = Ragaman.new("Tea sip ie", "alexander piesieat")
-  #   expect(is_anagram.ragamanner()).to(eq("piesieat is an anagram of Tea sip ie"))
-  # end
-  # it('phrases receive the same processing as a word for anagram, antigram, and letter case') do
-  #   is_anagram = Ragaman.new("I eat pies", "Tea sip ie")
-  #   expect(is_anagram.ragamanner()).to(eq("is an anagram"))
-  # end
+  it('when phrases and original word do not match, check each word in phrase against original input') do
+    is_anagram = Ragaman.new("Tea sip ie", "alexander piesieat")
+    expect(is_anagram.ragamanner()).to(include("piesieat is an anagram of Tea sip ie"))
+  end
 end
