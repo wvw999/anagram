@@ -72,13 +72,14 @@ class Ragaman
 
     # search through @all_combinations_of_words for antigram
     @parent_combination_array.each do |compare_antigram|
-      puts "fired anagramm checker for #{compare_antigram}"
+      puts "fired antigramm checker for #{compare_antigram}"
+      value3 = compare_antigram.join("").split("")
       compare_antigram.join("").split("").each do |antigram_check_level_one|
-        puts "here is antigram compare #{compare_antigram.join("").split("").each}"
+        puts "here is antigram compare #{value3}"
         @original_single_word.each do |antigram_check_level_two|
           puts "and here is antigram_check_level_two #{antigram_check_level_two}"
           if antigram_check_level_one == antigram_check_level_two
-            part_of_phrase_is_antigram = 0
+            part_of_phrase_is_antigram = 1
           end
         end
       end
