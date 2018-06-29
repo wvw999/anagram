@@ -26,10 +26,10 @@ describe('#anagram') do
     is_anagram = Ragaman.new("^!554,", "fits")
     expect("Your original word input was not a word")
   end
-  # it('phrases are input, check entire phrase against original input') do
-  #   is_anagram = Ragaman.new("piesieat", "Tea sip ie")
-  #   expect(is_anagram.ragamanner()).to(eq("is anagram"))
-  # end
+  it('when phrases are input, check entire phrase against original input') do
+    is_anagram = Ragaman.new("piesieat", "Tea sip ie")
+    expect(is_anagram.ragamanner()).to(eq("tea sip ie is anagram of piesieat"))
+  end
   # it('when phrases and original word do not match, check each word in phrase against original input') do
   #   is_anagram = Ragaman.new("Tea sip ie", "alexander piesieat")
   #   expect(is_anagram.ragamanner()).to(eq("is anagram"))
