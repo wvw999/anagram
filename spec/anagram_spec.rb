@@ -14,10 +14,10 @@ describe('#anagram') do
     is_anagram = Ragaman.new("shoe", "fits")
     expect(is_anagram.ragamanner()).to(eq("fits is not anagram or antigram of shoe"))
   end
-  # it('handle upper lower case in word checks') do
-  #   is_anagram = Ragaman.new("Tea", "Eat")
-  #   expect(is_anagram.ragamanner()).to(eq("is anagram"))
-  # end
+  it('handle upper lower case in word checks') do
+    is_anagram = Ragaman.new("Tea", "Eat")
+    expect(is_anagram.ragamanner()).to(eq("is anagram"))
+  end
   # it('verify that original input string is a word') do
   #   is_anagram = Ragaman.new("ffgghh", "ffggbbhh")
   #   expect(is_anagram.ragamanner()).to(eq("Your original word input was not a word"))

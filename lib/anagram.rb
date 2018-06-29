@@ -1,8 +1,8 @@
 class Ragaman
 
   def initialize(source,candidate)
-    @original_input = source.downcase
-    @input_to_analyze = candidate.downcase
+    @original_input = source # .downcase
+    @input_to_analyze = candidate # .downcase
     @result_message = ""
     # if @original_input.match?(/[aeiouy])
     # else
