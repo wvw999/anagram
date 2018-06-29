@@ -38,12 +38,15 @@ class which will check input's status as anagram or antigram
 * verify that each discrete block of input are words
  - Input: ^!554,
  - Output: false
+* when phrases are input, check entire phrase against original input
+ - Input: piesieat, Tea sip ie
+ - Output: is anagram
+* when phrases and original word do not match, check each word in phrase against original input
+ - Input: piesieat, Alexander Tea sip ie
+ - Output: is anagram
 * phrases receive the same processing as a word for anagram, antigram, and letter case
  - Input: I eat pies, Tea sip ie
  - Output: true
-* phrases receive the same processing as a word for non-word components
- - Input: frogs like tennis, dogs eat TTRRFBR
- - Output: false
 
 ## License
 

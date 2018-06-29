@@ -3,25 +3,35 @@ class Ragaman
   def initialize(source,candidate)
     @original_input = source.downcase
     @input_to_analyze = candidate.downcase
+    @result_message = ""
+    # if @original_input.match?(/[aeiouy])
+    # else
+    #   @result_message ="Your original word input was not a word"
+    #   exit
+    # end
   end
 
   def ragamanner()
-    result_message = ""
     @original_single_word = @original_input.split("")
     @input_single_word = @input_to_analyze.split("")
     if @original_single_word.sort.join("") == @input_single_word.sort.join("")
-      result_message = "is anagram"
-    elsif mantarigger()
-      result_message = "is antigram"
+      result_message = "#{@input_to_analyze} is anagram of #{@original_input}"
+    elsif mantarigger() == true
+      result_message = "#{@input_to_analyze} is antigram of #{@original_input}"
     else
-      result_message = "is not anagramz or antigram"
+      result_message = "#{@input_to_analyze} is not anagram or antigram of #{@original_input}"
     end
   end
 
   def mantarigger()
-    result_message = ""
-    is_antigram = 0
-
+    is_antigram = 1
+    @original_single_word.each do |letter_one|
+      @input_single_word.each do |letter_two|
+        if letter_one == letter_two
+          is_antigram = 0
+        end
+      end
+    end
     if is_antigram == 1
       true
     else
