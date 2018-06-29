@@ -26,6 +26,9 @@ class which will check input's status as anagram or antigram
 * check if two words are antigrams
  - Input: bubble, grunt
  - Output: is antigram
+* notify if two words are not anagrams or antigrams
+ - Input: shoe, fits
+ - Output: is not anagram or antigram
 * handle upper lower case in word checks
  - Input: Tea, Eat
  - Output: true

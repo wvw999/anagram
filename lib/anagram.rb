@@ -11,21 +11,22 @@ class Ragaman
     @input_single_word = @input_to_analyze.split("")
     if @original_single_word.sort.join("") == @input_single_word.sort.join("")
       result_message = "is anagram"
-    elsif @original_single_word.length == @input_single_word.length
-      mantarigger()
+    elsif mantarigger()
+      result_message = "is antigram"
     else
-      result_message = "is not anagram"
+      result_message = "is not anagramz or antigram"
     end
   end
 
   def mantarigger()
     result_message = ""
-    not_antigram = 0
-    # if 
-    #   result_message = "is antigram"
-    # else
-    #   result_message = "is not anagram"
-    # end
+    is_antigram = 0
+
+    if is_antigram == 1
+      true
+    else
+      false
+    end
   end
 
 end
