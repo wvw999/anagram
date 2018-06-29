@@ -7,7 +7,6 @@ class Ragaman
     if @original_input.match?(/[aeiouy]/)
     else
       @result_message ="Your original word input was not a word"
-      exit
     end
   end
 

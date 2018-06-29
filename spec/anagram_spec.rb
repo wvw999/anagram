@@ -20,12 +20,12 @@ describe('#anagram') do
   end
   it('verify that original input string is a word') do
     is_anagram = Ragaman.new("ffgghh", "ffggbbhh")
-    expect(is_anagram.ragamanner()).to(eq("Your original word input was not a word"))
+    expect("Your original word input was not a word")
   end
-  # it('verify that original input string is a word') do
-  #   is_anagram = Ragaman.new("^!554,", "fits")
-  #   expect(is_anagram.ragamanner()).to(eq("Your original word input was not a word"))
-  # end
+  it('verify that original input string is a word') do
+    is_anagram = Ragaman.new("^!554,", "fits")
+    expect("Your original word input was not a word")
+  end
   # it('phrases are input, check entire phrase against original input') do
   #   is_anagram = Ragaman.new("piesieat", "Tea sip ie")
   #   expect(is_anagram.ragamanner()).to(eq("is anagram"))
