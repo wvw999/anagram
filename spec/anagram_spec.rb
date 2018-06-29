@@ -32,6 +32,10 @@ describe('#anagram') do
   end
   it('when phrases and original word do not match, check each word in phrase against original input') do
     is_anagram = Ragaman.new("Tea sip ie", "alexander piesieat")
-    expect(is_anagram.ragamanner()).to(include("piesieat is an anagram of Tea sip ie"))
+    expect(is_anagram.ragamanner()).to(include("piesieat is an anagram of tea sip ie"))
+  end
+  it('when phrases and original word do not match, check each word in phrase against original input') do
+    is_anagram = Ragaman.new("violins", "the vio lin was invented by pupupup and tututut")
+    expect(is_anagram.ragamanner()).to(include("tututut is an antigram of violins"))
   end
 end
