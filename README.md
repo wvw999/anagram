@@ -20,33 +20,33 @@ class which will check input's status as anagram or antigram
 * Ruby 2.4.1
 
 ## Specs/Steps
-* check if two words are anagrams
+* checks if two words are anangrams
  - Input: frogs, sgorf
- - Output: is anagram
-* check if two words are antigrams
- - Input: bubble, grunt
- - Output: is antigram
+ - Output: sgorf is an anagram of frogs
+* checks if two words are antigrams
+ - Input: bubble, grunts
+ - Output: grunts is not an anagram or antigram of bubble
 * notify if two words are not anagrams or antigrams
  - Input: shoe, fits
- - Output: is not anagram or antigram
+ - Output: fits is not anagram or antigram of shoe
 * handle upper lower case in word checks
  - Input: Tea, Eat
- - Output: true
-* verify that each discrete block of input are words
+ - Output: eat is an anagram of tea
+* verify that original input string is a word
  - Input: ffgghh
- - Output: false
-* verify that each discrete block of input are words
+ - Output: Your original word input was not a word
+* verify that original input string is a word
  - Input: ^!554,
- - Output: false
+ - Output: Your original word input was not a word
 * when phrases are input, check entire phrase against original input
  - Input: piesieat, Tea sip ie
- - Output: is anagram
+ - Output: tea sip ie is an anagram of piesieat
 * when phrases and original word do not match, check each word in phrase against original input
- - Input: piesieat, Alexander Tea sip ie
- - Output: is anagram
-* phrases receive the same processing as a word for anagram, antigram, and letter case
- - Input: I eat pies, Tea sip ie
- - Output: true
+ - Input: Tea sip ie, Alexander piesieat
+ - Output: piesieat is an anagram of tea sip ie
+* when phrases and original word do not match, check each word in phrase against original input
+ - Input: violins, the vio lin was invented by pupupup and tututut
+ - Output: tututut is an antigram of violins
 
 ## License
 
