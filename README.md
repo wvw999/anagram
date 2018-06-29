@@ -22,7 +22,10 @@ class which will check input's status as anagram or antigram
 ## Specs/Steps
 * check if two words are anagrams
  - Input: frogs, sgorf
- - Output: true
+ - Output: is anagram
+* check if two words are antigrams
+ - Input: bubble, grunt
+ - Output: is antigram
 * handle upper lower case in word checks
  - Input: Tea, Eat
  - Output: true
