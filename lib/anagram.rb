@@ -4,11 +4,11 @@ class Ragaman
     @original_input = source.downcase
     @input_to_analyze = candidate.downcase
     @result_message = ""
-    # if @original_input.match?(/[aeiouy])
-    # else
-    #   @result_message ="Your original word input was not a word"
-    #   exit
-    # end
+    if @original_input.match?(/[aeiouy]/)
+    else
+      @result_message ="Your original word input was not a word"
+      exit
+    end
   end
 
   def ragamanner()
