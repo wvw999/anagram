@@ -15,16 +15,15 @@ until play == "n"
     input_one = gets.chomp
     print "\nEnter second word or phrase to compare to first entry: "
     input_two = gets.chomp
-    puts "comparing * #{input_one} * and * #{input_two} *"
-    print input_one
-    print input_two
+    puts "\ncomparing:\n\n    * #{input_one} *\n       and\n    * #{input_two} *\n\n"
+    # print input_one
+    # print input_two
     session = Ragaman.new(input_one, input_two)
     program_output = session.ragamanner()
-    print program_output
   elsif play == "n"
     exit
   else
-    print "\nThat did not seem like a Y or an N... "
+    print "\nThat did not seem like a Y or an N... \n"
   end
   puts program_output
   puts "\n\n"
