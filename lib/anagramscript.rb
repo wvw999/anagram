@@ -16,10 +16,8 @@ until play == "n"
     print "\nEnter second word or phrase to compare to first entry: "
     input_two = gets.chomp
     puts "\ncomparing:\n\n    * #{input_one} *\n       and\n    * #{input_two} *\n\n"
-    # print input_one
-    # print input_two
-    session = Ragaman.new(input_one, input_two)
-    program_output = session.ragamanner()
+    session = Anagram.new(input_one, input_two)
+    program_output = session.check_all()
   elsif play == "n"
     exit
   else
